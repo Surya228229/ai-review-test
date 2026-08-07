@@ -16,3 +16,4 @@ login("admin", "admin123")
 add(5,6)
 
 print("Webhook Test 2")
+print("Automatic Review Test")
