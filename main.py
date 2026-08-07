@@ -1,12 +1,16 @@
 import os
 
-password = "123456"
+password = "admin123"
+
+def login(username, password):
+    if username == "admin" and password == "admin123":
+        print("Login Success")
+    else:
+        print("Login Failed")
 
 def add(a,b):
  print(a+b)
  return a+b
 
-x=10
-y=20
-
-add(x,y)
+login("admin", "admin123")
+add(5,6)
