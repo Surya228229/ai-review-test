@@ -20,15 +20,15 @@ print("Automatic Review Test")
 print("Webhook Final Test")
 
 def get_user(user_id):
-    query = "SELECT * FROM users WHERE id = " + user_id
-    return query
+    query = "SELECT * FROM users WHERE id = ?"
+    return query, (user_id,)
 
 
 API_KEY = "my-secret-api-key-12345"
 
 def delete_user(user_id):
-    query = "DELETE FROM users WHERE id = " + user_id
-    return query
+    query = "DELETE FROM users WHERE id = ?"
+    return query, (user_id,)
 
 def find_user(users, target):
     for user in users:
