@@ -29,3 +29,19 @@ API_KEY = "my-secret-api-key-12345"
 def delete_user(user_id):
     query = "DELETE FROM users WHERE id = " + user_id
     return query
+
+def find_user(users, target):
+    for user in users:
+        if user["name"] == target:
+            return user
+
+    return None
+
+
+def calculate_average(numbers):
+    total = 0
+
+    for number in numbers:
+        total += number
+
+    return total / len(numbers)
