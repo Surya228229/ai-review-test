@@ -18,3 +18,14 @@ add(5,6)
 print("Webhook Test 2")
 print("Automatic Review Test")
 print("Webhook Final Test")
+
+def get_user(user_id):
+    query = "SELECT * FROM users WHERE id = " + user_id
+    return query
+
+
+API_KEY = "my-secret-api-key-12345"
+
+def delete_user(user_id):
+    query = "DELETE FROM users WHERE id = " + user_id
+    return query
