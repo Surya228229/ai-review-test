@@ -49,3 +49,23 @@ def calculate_average(numbers):
 def search_user(user_id):
     query = "SELECT * FROM users WHERE id = ?"
     return query, (user_id,)
+def count_active_users(users):
+    count = 0
+    for user in users:
+        if user.get("active"):
+            count += 1
+    return count
+
+
+def find_admin(users):
+    for user in users:
+        if user.get("role") == "admin":
+            return user
+    return None
+
+
+def find_moderator(users):
+    for user in users:
+        if user.get("role") == "moderator":
+            return user
+    return None
