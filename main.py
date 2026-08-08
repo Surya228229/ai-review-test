@@ -69,3 +69,9 @@ def find_moderator(users):
         if user.get("role") == "moderator":
             return user
     return None
+
+def find_reviewer(users):
+    for user in users:
+        if user.get("role") == "reviewer":
+            return user
+    return None
