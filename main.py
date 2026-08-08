@@ -45,3 +45,7 @@ def calculate_average(numbers):
         total += number
 
     return total / len(numbers)
+
+def search_user(user_id):
+    query = "SELECT * FROM users WHERE id = ?"
+    return query, (user_id,)
