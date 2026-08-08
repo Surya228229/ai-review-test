@@ -75,3 +75,5 @@ def find_reviewer(users):
         if user.get("role") == "reviewer":
             return user
     return None
+
+print('Final review validation')
